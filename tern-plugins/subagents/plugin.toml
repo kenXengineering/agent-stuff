@@ -1,0 +1,18 @@
+schema = 1
+id = "subagents"
+name = "Subagents"
+version = "0.1.0"
+description = "Live omp subagents as a block: status list, in-place transcripts, and transcripts in a split below."
+icon = "users"
+host = "host.luau"
+window = "window.luau"
+
+[[blocks]]
+id = "list"
+title = "Subagents"
+icon = "users"
+
+[[blocks]]
+id = "transcript"
+title = "Subagent transcript"
+palette = false
