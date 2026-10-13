@@ -18,12 +18,39 @@ A transcript opened below is a `subagents.transcript` block with the same keys (
 
 ## Install
 
+### From GitHub
+
+```sh
+tern plugin install github.com/kenXengineering/agent-stuff/tern-plugins/subagents
+```
+
+This clones the repo's default branch (shallow) and copies the `tern-plugins/subagents` directory into Tern's
+plugins folder (`tern plugin dir`). It needs `git` on `PATH`; a running Tern reloads its plugins itself, so there is
+no restart. With Tern running, `tern plugin list` should show `subagents` as `ready`.
+
+Then open the command palette and run **New Subagents block** from the pane where omp runs (the block takes
+that pane's directory).
+
+To update, or to get a newer `main`, run the same command with `--force` (it refuses to overwrite otherwise):
+
+```sh
+tern plugin install github.com/kenXengineering/agent-stuff/tern-plugins/subagents --force
+```
+
+`tern plugin remove subagents` uninstalls it. An install is a copy, so it does not follow later changes to the
+repo. A plugin linked with `tern plugin link` is never replaced by `install`; run `tern plugin unlink subagents` first.
+
+To install a branch or tag instead of `main`, clone it and install the directory:
+`git clone -b <ref> https://github.com/kenXengineering/agent-stuff && tern plugin install agent-stuff/tern-plugins/subagents`.
+
+### From a local checkout (development)
+
 ```sh
 tern plugin link /path/to/agent-stuff/tern-plugins/subagents
 ```
 
-Then open the command palette and run **New Subagents block** from the pane where omp runs (the block takes
-that pane's directory). `tern plugin types tern-plugins/subagents` writes `tern.d.luau` for luau-lsp.
+`link` loads the plugin where it is, so edits take effect on save. `tern plugin types /tmp/subagents-types`
+writes `tern.d.luau` for luau-lsp (keep it out of the repo).
 
 ## How it works
 
