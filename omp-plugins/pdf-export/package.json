@@ -1,0 +1,10 @@
+{
+  "name": "omp-pdf-export",
+  "version": "0.1.0",
+  "description": "omp extension: /pdf exports chat responses to a rendered PDF",
+  "type": "module",
+  "private": true,
+  "omp": {
+    "extensions": ["./src/index.ts"]
+  }
+}
