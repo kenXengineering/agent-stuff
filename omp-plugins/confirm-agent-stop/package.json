@@ -1,0 +1,10 @@
+{
+  "name": "omp-confirm-agent-stop",
+  "version": "0.1.0",
+  "description": "omp extension: ask for confirmation before Esc / Ctrl+C / Ctrl+D stops a running agent",
+  "type": "module",
+  "private": true,
+  "omp": {
+    "extensions": ["./src/index.ts"]
+  }
+}
