@@ -10,7 +10,7 @@
 #   scan.sh size FILE              the file's size in bytes
 #   scan.sh tail FILE N            the file's last N lines
 #
-# Needs only POSIX sh, awk, grep, head, ls, wc, tail, date.
+# Needs only POSIX sh, awk, grep, head, ls, wc, tail, date, cut, tr.
 
 here=$(cd "$(dirname "$0")" && pwd)
 cmd=$1

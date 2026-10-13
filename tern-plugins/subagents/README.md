@@ -56,5 +56,5 @@ The block reads omp's own session files; nothing needs to be installed on the om
 - The block follows the directory of the pane it was opened from. Two omp sessions in one directory are both
   listed in `s`; the one written last is shown first.
 - Untested: `cx:open` reaches every window showing the session, so ⌘-click with two windows attached may open the transcript block twice.
-- Needs a POSIX `sh`, `awk`, `grep`, `tail`, `wc` and `date` on the machine running the Tern daemon (macOS, Linux).
+- Needs a POSIX `sh` plus `awk`, `grep`, `head`, `ls`, `wc`, `tail`, `date`, `cut` and `tr` on the machine running the Tern daemon (macOS, Linux).
 - Transcripts are tailed (400 lines, `p` loads 400 more) and at most the newest 160 entries are drawn.

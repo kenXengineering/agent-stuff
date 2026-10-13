@@ -7,7 +7,8 @@
 # Entries are classified from raw text instead of decoded: transcript lines can be
 # hundreds of KB (tool results), and only a few keys decide the agent's status. A raw
 # `"key":"` can only be a real key, because quotes inside JSON strings are escaped.
-# Plain index/substr only: no regex, so long lines stay cheap and awk flavours agree.
+# Scanning uses plain index/substr, not regex, so long lines stay cheap and awk flavours agree.
+# The one regex is a tab squash on a 400-char slice.
 
 # The text after the first `marker`, up to the next quote (at most 400 chars), else "".
 function after(line, marker,    p, rest, q) {
